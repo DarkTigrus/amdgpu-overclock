@@ -1,8 +1,8 @@
 #!/bin/bash
 # https://dri.freedesktop.org/docs/drm/gpu/amdgpu.html#pp-od-clk-voltage
 
-FILE_PERFORMANCE=$(echo /sys/class/drm/card0/device/power_dpm_force_performance_level)
-FILE_CLK_VOLTAGE=$(echo /sys/class/drm/card0/device/pp_od_clk_voltage)
+FILE_PERFORMANCE=$(echo /sys/class/drm/card?/device/power_dpm_force_performance_level)
+FILE_CLK_VOLTAGE=$(echo /sys/class/drm/card?/device/pp_od_clk_voltage)
 
 [ -f /etc/amdgpu-overclock.cfg ] && . /etc/amdgpu-overclock.cfg
 
